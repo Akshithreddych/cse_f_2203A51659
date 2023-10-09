@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Array Elements</title>
+</head>
+<body>
+    <center>
+        <h1>Display Array Elements</h1>
+        <button type="button" onclick="displayArray()">Display Array</button>
+        <p id="result"></p>
+    </center>
+
+    <script>
+        function displayArray() {
+            var numbers = [10, 20, 30, 40, 50];
+            var displayString = "Array elements: ";
+            for (var i = 0; i < numbers.length; i++) {
+                displayString += numbers[i];
+                if (i < numbers.length - 1) {
+                    displayString += ", ";
+                }
+            }
+            document.getElementById('result').textContent = displayString;
+        }
+    </script>
+</body>
+</html>

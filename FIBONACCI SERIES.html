@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <center>
+        <h1>Fibonacci Series</h1>
+        Enter the number of terms: <input type="text" id="terms"><br><br>
+        <button type="button" onclick="printFibonacci()">Generate Fibonacci Series</button>
+        <p id="result"></p>
+    </center>
+
+    <script>
+        function printFibonacci() {
+            var terms = parseInt(document.getElementById('terms').value);
+            var fibonacciSeries = [];
+
+            if (terms < 1) {
+                document.getElementById('result').textContent = "Please enter a positive integer.";
+                return;
+            }
+
+            var a = 0, b = 1;
+            for (var i = 0; i < terms; i++) {
+                fibonacciSeries.push(a);
+                var temp = a;
+                a = b;
+                b = temp + b;
+            }
+
+            document.getElementById('result').textContent = `Fibonacci Series: ${fibonacciSeries.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

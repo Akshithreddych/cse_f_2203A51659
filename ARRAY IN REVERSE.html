@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Array Elements in Reverse</title>
+</head>
+<body>
+    <center>
+        <h1>Display Array Elements in Reverse</h1>
+        <button type="button" onclick="displayArrayInReverse()">Display Array in Reverse</button>
+        <p id="result"></p>
+    </center>
+
+    <script>
+        function displayArrayInReverse() {
+            var numbers = [10, 20, 30, 40, 50];
+            var displayString = "Array elements in reverse: ";
+            for (var i = numbers.length - 1; i >= 0; i--) {
+                displayString += numbers[i];
+                if (i > 0) {
+                    displayString += ", ";
+                }
+            }
+            document.getElementById('result').textContent = displayString;
+        }
+    </script>
+</body>
+</html>

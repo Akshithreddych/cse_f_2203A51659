@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Greatest of 3 Numbers</title>
+    </head>
+    <script>
+        function check()
+        {
+            var a,b,c;
+            a=parseInt(document.getElementById("a").value);
+            b=parseInt(document.getElementById("b").value);
+            c=parseInt(document.getElementById("c").value);
+            if(a>b && a>c)
+            {
+                document.writeln("a is greater : ",a);
+            }
+            else if(b>a && b>c)
+            {
+                document.writeln("b is greater : ",b);
+            }
+            else{
+                document.writeln("c is greater : ",c);
+            }
+        }
+    </script>
+    <body>
+        <center>
+            <h1>Greatest of 3 Numbers</h1>
+            Enter 1st number : <input type="text" id="a"><br><br>
+            Enter 2nd number : <input type="text" id="b"><br><br>
+            Enter 3rd number : <input type="text" id="c"><br><br>
+            <button type="button" onclick="check()">Result</button>
+        </center>
+    </body>
+</html>
